@@ -1,143 +1,157 @@
+import {
+  Button,
+  Col,
+  FormCheck,
+  FormControl,
+  FormLabel,
+  FormSelect,
+  Row,
+} from "react-bootstrap";
+
 export default function AssignmentEditor() {
   return (
     <div id="wd-assignments-editor">
-      <label htmlFor="wd-name">Assignment Name</label>
-      <input id="wd-name" defaultValue="A1 - ENV + HTML" />
-      <br />
-      <br />
-      <textarea id="wd-description">
-        The assignment is available online Submit a link to the landing page of
-      </textarea>
-      <br />
-      <table>
-        <tr>
-          <td align="right" valign="top">
-            <label htmlFor="wd-points">Points</label>
-          </td>
-          <td>
-            <input id="wd-points" defaultValue={100} />
-          </td>
-        </tr>
+      <div className="mb-3">
+        <FormLabel htmlFor="wd-name">Assignment Name</FormLabel>
+        <FormControl id="wd-name" defaultValue="A1" />
+      </div>
 
-        <br />
+      <div className="mb-3">
+        <FormControl
+          as="textarea"
+          rows={6}
+          id="wd-description"
+          defaultValue="This is an assignment description."
+        />
+      </div>
 
-        <tr>
-          <td align="right" valign="top">
-            <label htmlFor="wd-assignment-group">Assignment Group</label>
-          </td>
-          <td>
-            <select id="wd-assignment-group" defaultValue="ASSIGNMENTS">
-              <option value="ASSIGNMENTS">ASSIGNMENTS</option>
-              <option value="QUIZZES">QUIZZES</option>
-              <option value="EXAMS">EXAMS</option>
-              <option value="PROJECT">PROJECT</option>
-            </select>
-          </td>
-        </tr>
+      <Row className="mb-3">
+        <Col sm={3} className="text-end">
+          <FormLabel htmlFor="wd-points">Points</FormLabel>
+        </Col>
+        <Col sm={9}>
+          <FormControl id="wd-points" defaultValue={100} />
+        </Col>
+      </Row>
 
-        <br />
+      <Row className="mb-3">
+        <Col sm={3} className="text-end">
+          <FormLabel htmlFor="wd-assignment-group">Assignment Group</FormLabel>
+        </Col>
+        <Col sm={9}>
+          <FormSelect id="wd-assignment-group" defaultValue="ASSIGNMENTS">
+            <option value="ASSIGNMENTS">ASSIGNMENTS</option>
+            <option value="QUIZZES">QUIZZES</option>
+            <option value="EXAMS">EXAMS</option>
+            <option value="PROJECT">PROJECT</option>
+          </FormSelect>
+        </Col>
+      </Row>
 
-        <tr>
-          <td align="right" valign="top">
-            <label htmlFor="wd-display-grade-as">Display Grade as</label>
-          </td>
-          <td>
-            <select id="wd-display-grade-as" defaultValue="PERCENTAGE">
-              <option value="PERCENTAGE">Percentage</option>
-              <option value="POINTS">Points</option>
-            </select>
-          </td>
-        </tr>
+      <Row className="mb-3">
+        <Col sm={3} className="text-end">
+          <FormLabel htmlFor="wd-display-grade-as">Display Grade as</FormLabel>
+        </Col>
+        <Col sm={9}>
+          <FormSelect id="wd-display-grade-as" defaultValue="PERCENTAGE">
+            <option value="PERCENTAGE">Percentage</option>
+            <option value="POINTS">Points</option>
+          </FormSelect>
+        </Col>
+      </Row>
 
-        <br />
+      <Row className="mb-3">
+        <Col sm={3} className="text-end">
+          <FormLabel htmlFor="wd-submission-type">Submission Type</FormLabel>
+        </Col>
+        <Col sm={9}>
+          <FormSelect id="wd-submission-type" defaultValue="ONLINE">
+            <option value="ONLINE">Online</option>
+            <option value="EXTERNAL_TOOL">External Tool</option>
+            <option value="NO_SUBMISSION">No Submission</option>
+          </FormSelect>
 
-        <tr>
-          <td align="right" valign="top">
-            <label htmlFor="wd-submission-type">Submission Type</label>
-          </td>
-          <td>
-            <select id="wd-submission-type" defaultValue="ONLINE">
-              <option value="ONLINE">Online</option>
-              <option value="EXTERNAL_TOOL">External Tool</option>
-              <option value="NO_SUBMISSION">No Submission</option>
-            </select>
+          <div className="border rounded p-3 mt-3">
+            <div className="fw-bold mb-2">Online Entry Options</div>
+            <FormCheck id="wd-text-entry" label="Text Entry" className="mb-2" />
+            <FormCheck
+              id="wd-website-url"
+              label="Website URL"
+              className="mb-2"
+            />
+            <FormCheck
+              id="wd-media-recordings"
+              label="Media Recordings"
+              className="mb-2"
+            />
+            <FormCheck
+              id="wd-student-annotation"
+              label="Student Annotation"
+              className="mb-2"
+            />
+            <FormCheck id="wd-file-uploads" label="File Uploads" />
+          </div>
+        </Col>
+      </Row>
 
-            <br />
-            <br />
+      <Row className="mb-3">
+        <Col sm={3} className="text-end">
+          <FormLabel>Assign</FormLabel>
+        </Col>
+        <Col sm={9}>
+          <div className="border rounded p-3">
+            <div className="mb-3">
+              <FormLabel htmlFor="wd-assign-to">Assign to</FormLabel>
+              <FormControl id="wd-assign-to" defaultValue="Everyone" />
+            </div>
 
-            <label>Online Entry Options</label>
-            <br />
+            <div className="mb-3">
+              <FormLabel htmlFor="wd-due-date">Due</FormLabel>
+              <FormControl
+                id="wd-due-date"
+                type="date"
+                defaultValue="2024-05-13"
+              />
+            </div>
 
-            <input type="checkbox" id="wd-text-entry" />
-            <label htmlFor="wd-text-entry">Text Entry</label>
-            <br />
+            <Row>
+              <Col>
+                <div>
+                  <FormLabel htmlFor="wd-available-from">
+                    Available from
+                  </FormLabel>
+                  <FormControl
+                    id="wd-available-from"
+                    type="date"
+                    defaultValue="2024-05-06"
+                  />
+                </div>
+              </Col>
+              <Col>
+                <div>
+                  <FormLabel htmlFor="wd-available-until">Until</FormLabel>
+                  <FormControl
+                    id="wd-available-until"
+                    type="date"
+                    defaultValue="2024-05-20"
+                  />
+                </div>
+              </Col>
+            </Row>
+          </div>
+        </Col>
+      </Row>
 
-            <input type="checkbox" id="wd-website-url" />
-            <label htmlFor="wd-website-url">Website URL</label>
-            <br />
-
-            <input type="checkbox" id="wd-media-recordings" />
-            <label htmlFor="wd-media-recordings">Media Recordings</label>
-            <br />
-
-            <input type="checkbox" id="wd-student-annotation" />
-            <label htmlFor="wd-student-annotation">Student Annotation</label>
-            <br />
-
-            <input type="checkbox" id="wd-file-uploads" />
-            <label htmlFor="wd-file-uploads">File Uploads</label>
-          </td>
-        </tr>
-
-        <tr>
-          <td align="right" valign="top">
-            <label htmlFor="wd-assign-to">Assign</label>
-          </td>
-
-          <td>
-            <label htmlFor="wd-assign-to">Assign to</label>
-            <br />
-            <input id="wd-assign-to" defaultValue="Everyone" />
-            <br />
-            <br />
-
-            <label htmlFor="wd-due-date">Due</label>
-            <br />
-            <input id="wd-due-date" type="date" defaultValue="2024-05-13" />
-            <br />
-            <br />
-
-            <table>
-              <tbody>
-                <tr>
-                  <td valign="top">
-                    <label htmlFor="wd-available-from">Available from</label>
-                    <br />
-                    <input
-                      id="wd-available-from"
-                      type="date"
-                      defaultValue="2024-05-06"
-                    />
-                  </td>
-
-                  <td valign="top">
-                    <label htmlFor="wd-available-until">Until</label>
-                    <br />
-                    <input
-                      id="wd-available-until"
-                      type="date"
-                      defaultValue="2024-05-20"
-                    />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </table>
       <hr />
-      <button id="wd-cancel-assignment">Cancel</button>
-      <button id="wd-save-assignment">Save</button>
+
+      <div className="float-end">
+        <Button id="wd-cancel-assignment" variant="secondary" className="me-2">
+          Cancel
+        </Button>
+        <Button id="wd-save-assignment" variant="danger">
+          Save
+        </Button>
+      </div>
     </div>
   );
 }
