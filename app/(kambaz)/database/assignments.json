@@ -1,0 +1,105 @@
+[
+  { "_id": "A-CS1200-01", "title": "Seminar Reflection 1", "course": "CS1200" },
+  {
+    "_id": "A-CS1200-02",
+    "title": "Campus Resources Writeup",
+    "course": "CS1200"
+  },
+  {
+    "_id": "A-CS1200-03",
+    "title": "Mini Project Check-in",
+    "course": "CS1200"
+  },
+
+  {
+    "_id": "A-CS1800-01",
+    "title": "Logic & Truth Tables Problem Set",
+    "course": "CS1800"
+  },
+  {
+    "_id": "A-CS1800-02",
+    "title": "Proof Techniques Homework",
+    "course": "CS1800"
+  },
+  {
+    "_id": "A-CS1800-03",
+    "title": "Sets, Relations, and Functions Worksheet",
+    "course": "CS1800"
+  },
+
+  {
+    "_id": "A-CS2000-01",
+    "title": "Programming Fundamentals Exercises",
+    "course": "CS2000"
+  },
+  {
+    "_id": "A-CS2000-02",
+    "title": "Functions & Testing Assignment",
+    "course": "CS2000"
+  },
+  {
+    "_id": "A-CS2000-03",
+    "title": "Collections Practice Lab",
+    "course": "CS2000"
+  },
+
+  {
+    "_id": "A-CS2100-01",
+    "title": "Classes & Objects Homework",
+    "course": "CS2100"
+  },
+  {
+    "_id": "A-CS2100-02",
+    "title": "Inheritance & Interfaces Practice",
+    "course": "CS2100"
+  },
+  {
+    "_id": "A-CS2100-03",
+    "title": "OOP Design & Testing Lab",
+    "course": "CS2100"
+  },
+
+  {
+    "_id": "A-CS3000-01",
+    "title": "Stacks, Queues, and Hashing Assignment",
+    "course": "CS3000"
+  },
+  { "_id": "A-CS3000-02", "title": "Trees Problem Set", "course": "CS3000" },
+  {
+    "_id": "A-CS3000-03",
+    "title": "Graphs Algorithms Worksheet",
+    "course": "CS3000"
+  },
+
+  {
+    "_id": "A-CS3100-01",
+    "title": "Refactoring & SOLID Exercise",
+    "course": "CS3100"
+  },
+  {
+    "_id": "A-CS3100-02",
+    "title": "Architecture & Modularity Writeup",
+    "course": "CS3100"
+  },
+  {
+    "_id": "A-CS3100-03",
+    "title": "Team Workflow & CI Assignment",
+    "course": "CS3100"
+  },
+
+  {
+    "_id": "A-CS3800-01",
+    "title": "Finite Automata Homework",
+    "course": "CS3800"
+  },
+  {
+    "_id": "A-CS3800-02",
+    "title": "Context-Free Grammars Problem Set",
+    "course": "CS3800"
+  },
+  {
+    "_id": "A-CS3800-03",
+    "title": "Computability & Reductions Worksheet",
+    "course": "CS3800"
+  }
+]

@@ -1,0 +1,554 @@
+[
+  {
+    "_id": "MCS1200-01",
+    "name": "Introduction & Expectations",
+    "description": "Overview of the seminar and course expectations.",
+    "course": "CS1200",
+    "lessons": [
+      {
+        "_id": "LCS1200-01-01",
+        "name": "Syllabus",
+        "description": "Review the syllabus and policies.",
+        "module": "MCS1200-01"
+      },
+      {
+        "_id": "LCS1200-01-02",
+        "name": "Resources",
+        "description": "Campus resources and support.",
+        "module": "MCS1200-01"
+      },
+      {
+        "_id": "LCS1200-01-03",
+        "name": "Success Strategies",
+        "description": "Habits for success in college.",
+        "module": "MCS1200-01"
+      }
+    ]
+  },
+  {
+    "_id": "MCS1200-02",
+    "name": "Communication & Collaboration",
+    "description": "Working with peers and communicating effectively.",
+    "course": "CS1200",
+    "lessons": [
+      {
+        "_id": "LCS1200-02-01",
+        "name": "Professional Communication",
+        "description": "Email, etiquette, and teamwork.",
+        "module": "MCS1200-02"
+      },
+      {
+        "_id": "LCS1200-02-02",
+        "name": "Team Roles",
+        "description": "How teams function and collaborate.",
+        "module": "MCS1200-02"
+      },
+      {
+        "_id": "LCS1200-02-03",
+        "name": "Reflection",
+        "description": "Reflecting on progress and goals.",
+        "module": "MCS1200-02"
+      }
+    ]
+  },
+  {
+    "_id": "MCS1200-03",
+    "name": "Mini Project",
+    "description": "Plan and begin a small seminar project.",
+    "course": "CS1200",
+    "lessons": [
+      {
+        "_id": "LCS1200-03-01",
+        "name": "Project Prompt",
+        "description": "Understand the project requirements.",
+        "module": "MCS1200-03"
+      },
+      {
+        "_id": "LCS1200-03-02",
+        "name": "Milestones",
+        "description": "Set milestones and deadlines.",
+        "module": "MCS1200-03"
+      },
+      {
+        "_id": "LCS1200-03-03",
+        "name": "Presentation Outline",
+        "description": "Prepare a short presentation plan.",
+        "module": "MCS1200-03"
+      }
+    ]
+  },
+
+  {
+    "_id": "MCS1800-01",
+    "name": "Propositional Logic",
+    "description": "Statements, connectives, and truth tables.",
+    "course": "CS1800",
+    "lessons": [
+      {
+        "_id": "LCS1800-01-01",
+        "name": "Statements & Connectives",
+        "description": "AND/OR/NOT/IMPLIES.",
+        "module": "MCS1800-01"
+      },
+      {
+        "_id": "LCS1800-01-02",
+        "name": "Truth Tables",
+        "description": "Evaluate logical expressions.",
+        "module": "MCS1800-01"
+      },
+      {
+        "_id": "LCS1800-01-03",
+        "name": "Equivalence",
+        "description": "Logical equivalences and identities.",
+        "module": "MCS1800-01"
+      }
+    ]
+  },
+  {
+    "_id": "MCS1800-02",
+    "name": "Proof Techniques",
+    "description": "Direct, contrapositive, contradiction.",
+    "course": "CS1800",
+    "lessons": [
+      {
+        "_id": "LCS1800-02-01",
+        "name": "Direct Proof",
+        "description": "Build a proof step-by-step.",
+        "module": "MCS1800-02"
+      },
+      {
+        "_id": "LCS1800-02-02",
+        "name": "Contrapositive",
+        "description": "Prove using contrapositive reasoning.",
+        "module": "MCS1800-02"
+      },
+      {
+        "_id": "LCS1800-02-03",
+        "name": "Contradiction",
+        "description": "Assume false and derive contradiction.",
+        "module": "MCS1800-02"
+      }
+    ]
+  },
+  {
+    "_id": "MCS1800-03",
+    "name": "Sets & Relations",
+    "description": "Sets, functions, and relations.",
+    "course": "CS1800",
+    "lessons": [
+      {
+        "_id": "LCS1800-03-01",
+        "name": "Set Operations",
+        "description": "Union/intersection/difference.",
+        "module": "MCS1800-03"
+      },
+      {
+        "_id": "LCS1800-03-02",
+        "name": "Functions",
+        "description": "Injective/surjective/bijective.",
+        "module": "MCS1800-03"
+      },
+      {
+        "_id": "LCS1800-03-03",
+        "name": "Relations",
+        "description": "Equivalence relations and orders.",
+        "module": "MCS1800-03"
+      }
+    ]
+  },
+
+  {
+    "_id": "MCS2000-01",
+    "name": "Programming Basics",
+    "description": "Variables, expressions, and control flow.",
+    "course": "CS2000",
+    "lessons": [
+      {
+        "_id": "LCS2000-01-01",
+        "name": "Variables & Types",
+        "description": "Values and types.",
+        "module": "MCS2000-01"
+      },
+      {
+        "_id": "LCS2000-01-02",
+        "name": "Conditionals",
+        "description": "If/else logic.",
+        "module": "MCS2000-01"
+      },
+      {
+        "_id": "LCS2000-01-03",
+        "name": "Loops",
+        "description": "Repetition with loops.",
+        "module": "MCS2000-01"
+      }
+    ]
+  },
+  {
+    "_id": "MCS2000-02",
+    "name": "Functions & Decomposition",
+    "description": "Designing programs with functions.",
+    "course": "CS2000",
+    "lessons": [
+      {
+        "_id": "LCS2000-02-01",
+        "name": "Function Design",
+        "description": "Inputs, outputs, and behavior.",
+        "module": "MCS2000-02"
+      },
+      {
+        "_id": "LCS2000-02-02",
+        "name": "Testing Basics",
+        "description": "Simple unit tests.",
+        "module": "MCS2000-02"
+      },
+      {
+        "_id": "LCS2000-02-03",
+        "name": "Debugging",
+        "description": "Common debugging strategies.",
+        "module": "MCS2000-02"
+      }
+    ]
+  },
+  {
+    "_id": "MCS2000-03",
+    "name": "Collections",
+    "description": "Lists/arrays and problem solving patterns.",
+    "course": "CS2000",
+    "lessons": [
+      {
+        "_id": "LCS2000-03-01",
+        "name": "Arrays/Lists",
+        "description": "Core operations and patterns.",
+        "module": "MCS2000-03"
+      },
+      {
+        "_id": "LCS2000-03-02",
+        "name": "Searching",
+        "description": "Linear search.",
+        "module": "MCS2000-03"
+      },
+      {
+        "_id": "LCS2000-03-03",
+        "name": "Iteration Patterns",
+        "description": "Map/filter style thinking.",
+        "module": "MCS2000-03"
+      }
+    ]
+  },
+
+  {
+    "_id": "MCS2100-01",
+    "name": "Classes & Objects",
+    "description": "Intro to classes, objects, and methods.",
+    "course": "CS2100",
+    "lessons": [
+      {
+        "_id": "LCS2100-01-01",
+        "name": "Defining Classes",
+        "description": "Fields and methods.",
+        "module": "MCS2100-01"
+      },
+      {
+        "_id": "LCS2100-01-02",
+        "name": "Constructors",
+        "description": "Initialize object state.",
+        "module": "MCS2100-01"
+      },
+      {
+        "_id": "LCS2100-01-03",
+        "name": "Encapsulation",
+        "description": "Access modifiers and APIs.",
+        "module": "MCS2100-01"
+      }
+    ]
+  },
+  {
+    "_id": "MCS2100-02",
+    "name": "Inheritance & Interfaces",
+    "description": "Reuse and polymorphism.",
+    "course": "CS2100",
+    "lessons": [
+      {
+        "_id": "LCS2100-02-01",
+        "name": "Inheritance",
+        "description": "Extending classes.",
+        "module": "MCS2100-02"
+      },
+      {
+        "_id": "LCS2100-02-02",
+        "name": "Interfaces",
+        "description": "Programming to contracts.",
+        "module": "MCS2100-02"
+      },
+      {
+        "_id": "LCS2100-02-03",
+        "name": "Polymorphism",
+        "description": "Using base types.",
+        "module": "MCS2100-02"
+      }
+    ]
+  },
+  {
+    "_id": "MCS2100-03",
+    "name": "Design & Testing",
+    "description": "Better design and testing habits.",
+    "course": "CS2100",
+    "lessons": [
+      {
+        "_id": "LCS2100-03-01",
+        "name": "Abstraction",
+        "description": "Reducing duplication.",
+        "module": "MCS2100-03"
+      },
+      {
+        "_id": "LCS2100-03-02",
+        "name": "Refactoring",
+        "description": "Improve code structure.",
+        "module": "MCS2100-03"
+      },
+      {
+        "_id": "LCS2100-03-03",
+        "name": "Unit Testing OOP",
+        "description": "Testing classes and methods.",
+        "module": "MCS2100-03"
+      }
+    ]
+  },
+
+  {
+    "_id": "MCS3000-01",
+    "name": "Data Structures Overview",
+    "description": "Core structures and performance.",
+    "course": "CS3000",
+    "lessons": [
+      {
+        "_id": "LCS3000-01-01",
+        "name": "Big-O Review",
+        "description": "Asymptotic analysis basics.",
+        "module": "MCS3000-01"
+      },
+      {
+        "_id": "LCS3000-01-02",
+        "name": "Stacks & Queues",
+        "description": "ADTs and operations.",
+        "module": "MCS3000-01"
+      },
+      {
+        "_id": "LCS3000-01-03",
+        "name": "Hash Tables",
+        "description": "Hashing and collisions.",
+        "module": "MCS3000-01"
+      }
+    ]
+  },
+  {
+    "_id": "MCS3000-02",
+    "name": "Trees",
+    "description": "Tree structures and traversal.",
+    "course": "CS3000",
+    "lessons": [
+      {
+        "_id": "LCS3000-02-01",
+        "name": "Binary Trees",
+        "description": "Nodes and structure.",
+        "module": "MCS3000-02"
+      },
+      {
+        "_id": "LCS3000-02-02",
+        "name": "Binary Search Trees",
+        "description": "Search and insert/delete.",
+        "module": "MCS3000-02"
+      },
+      {
+        "_id": "LCS3000-02-03",
+        "name": "Traversals",
+        "description": "DFS traversals.",
+        "module": "MCS3000-02"
+      }
+    ]
+  },
+  {
+    "_id": "MCS3000-03",
+    "name": "Graphs",
+    "description": "Graph representations and traversal.",
+    "course": "CS3000",
+    "lessons": [
+      {
+        "_id": "LCS3000-03-01",
+        "name": "Representations",
+        "description": "Adjacency list/matrix.",
+        "module": "MCS3000-03"
+      },
+      {
+        "_id": "LCS3000-03-02",
+        "name": "BFS & DFS",
+        "description": "Graph traversal algorithms.",
+        "module": "MCS3000-03"
+      },
+      {
+        "_id": "LCS3000-03-03",
+        "name": "Shortest Paths",
+        "description": "Intro to shortest paths.",
+        "module": "MCS3000-03"
+      }
+    ]
+  },
+
+  {
+    "_id": "MCS3100-01",
+    "name": "Advanced OOP & Refactoring",
+    "description": "Writing maintainable OO code.",
+    "course": "CS3100",
+    "lessons": [
+      {
+        "_id": "LCS3100-01-01",
+        "name": "SOLID Overview",
+        "description": "Key principles.",
+        "module": "MCS3100-01"
+      },
+      {
+        "_id": "LCS3100-01-02",
+        "name": "Refactoring Patterns",
+        "description": "Improving design.",
+        "module": "MCS3100-01"
+      },
+      {
+        "_id": "LCS3100-01-03",
+        "name": "Testing Strategies",
+        "description": "Testing larger systems.",
+        "module": "MCS3100-01"
+      }
+    ]
+  },
+  {
+    "_id": "MCS3100-02",
+    "name": "Architecture & Modularity",
+    "description": "Structure codebases for growth.",
+    "course": "CS3100",
+    "lessons": [
+      {
+        "_id": "LCS3100-02-01",
+        "name": "Layered Design",
+        "description": "Separating concerns.",
+        "module": "MCS3100-02"
+      },
+      {
+        "_id": "LCS3100-02-02",
+        "name": "Dependencies",
+        "description": "Managing dependencies.",
+        "module": "MCS3100-02"
+      },
+      {
+        "_id": "LCS3100-02-03",
+        "name": "Code Reviews",
+        "description": "Review practices.",
+        "module": "MCS3100-02"
+      }
+    ]
+  },
+  {
+    "_id": "MCS3100-03",
+    "name": "Team Development Workflow",
+    "description": "Workflows for team software.",
+    "course": "CS3100",
+    "lessons": [
+      {
+        "_id": "LCS3100-03-01",
+        "name": "Git Workflow",
+        "description": "Branches and PRs.",
+        "module": "MCS3100-03"
+      },
+      {
+        "_id": "LCS3100-03-02",
+        "name": "CI Basics",
+        "description": "Automated checks.",
+        "module": "MCS3100-03"
+      },
+      {
+        "_id": "LCS3100-03-03",
+        "name": "Releases",
+        "description": "Versioning and releases.",
+        "module": "MCS3100-03"
+      }
+    ]
+  },
+
+  {
+    "_id": "MCS3800-01",
+    "name": "Regular Languages",
+    "description": "Finite automata and regular expressions.",
+    "course": "CS3800",
+    "lessons": [
+      {
+        "_id": "LCS3800-01-01",
+        "name": "DFA",
+        "description": "Deterministic automata basics.",
+        "module": "MCS3800-01"
+      },
+      {
+        "_id": "LCS3800-01-02",
+        "name": "NFA",
+        "description": "Nondeterminism and epsilon moves.",
+        "module": "MCS3800-01"
+      },
+      {
+        "_id": "LCS3800-01-03",
+        "name": "Regex",
+        "description": "Regular expressions.",
+        "module": "MCS3800-01"
+      }
+    ]
+  },
+  {
+    "_id": "MCS3800-02",
+    "name": "Context-Free Languages",
+    "description": "CFGs and pushdown automata.",
+    "course": "CS3800",
+    "lessons": [
+      {
+        "_id": "LCS3800-02-01",
+        "name": "CFG Basics",
+        "description": "Productions and derivations.",
+        "module": "MCS3800-02"
+      },
+      {
+        "_id": "LCS3800-02-02",
+        "name": "Parse Trees",
+        "description": "Ambiguity and parsing.",
+        "module": "MCS3800-02"
+      },
+      {
+        "_id": "LCS3800-02-03",
+        "name": "PDA Overview",
+        "description": "Pushdown automata concepts.",
+        "module": "MCS3800-02"
+      }
+    ]
+  },
+  {
+    "_id": "MCS3800-03",
+    "name": "Computability",
+    "description": "Turing machines and undecidability.",
+    "course": "CS3800",
+    "lessons": [
+      {
+        "_id": "LCS3800-03-01",
+        "name": "Turing Machines",
+        "description": "Model of computation.",
+        "module": "MCS3800-03"
+      },
+      {
+        "_id": "LCS3800-03-02",
+        "name": "Decidability",
+        "description": "Decidable vs undecidable.",
+        "module": "MCS3800-03"
+      },
+      {
+        "_id": "LCS3800-03-03",
+        "name": "Reductions",
+        "description": "Mapping reductions.",
+        "module": "MCS3800-03"
+      }
+    ]
+  }
+]

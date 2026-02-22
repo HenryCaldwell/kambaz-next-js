@@ -1,0 +1,43 @@
+[
+  { "_id": "E-CS1200-01", "user": "U301", "course": "CS1200" },
+  { "_id": "E-CS1200-02", "user": "U201", "course": "CS1200" },
+  { "_id": "E-CS1200-03", "user": "U101", "course": "CS1200" },
+  { "_id": "E-CS1200-04", "user": "U102", "course": "CS1200" },
+  { "_id": "E-CS1200-05", "user": "U105", "course": "CS1200" },
+
+  { "_id": "E-CS1800-01", "user": "U301", "course": "CS1800" },
+  { "_id": "E-CS1800-02", "user": "U202", "course": "CS1800" },
+  { "_id": "E-CS1800-03", "user": "U101", "course": "CS1800" },
+  { "_id": "E-CS1800-04", "user": "U103", "course": "CS1800" },
+  { "_id": "E-CS1800-05", "user": "U104", "course": "CS1800" },
+
+  { "_id": "E-CS2000-01", "user": "U301", "course": "CS2000" },
+  { "_id": "E-CS2000-02", "user": "U201", "course": "CS2000" },
+  { "_id": "E-CS2000-03", "user": "U102", "course": "CS2000" },
+  { "_id": "E-CS2000-04", "user": "U105", "course": "CS2000" },
+  { "_id": "E-CS2000-05", "user": "U106", "course": "CS2000" },
+
+  { "_id": "E-CS2100-01", "user": "U301", "course": "CS2100" },
+  { "_id": "E-CS2100-02", "user": "U202", "course": "CS2100" },
+  { "_id": "E-CS2100-03", "user": "U101", "course": "CS2100" },
+  { "_id": "E-CS2100-04", "user": "U104", "course": "CS2100" },
+  { "_id": "E-CS2100-05", "user": "U106", "course": "CS2100" },
+
+  { "_id": "E-CS3000-01", "user": "U301", "course": "CS3000" },
+  { "_id": "E-CS3000-02", "user": "U201", "course": "CS3000" },
+  { "_id": "E-CS3000-03", "user": "U103", "course": "CS3000" },
+  { "_id": "E-CS3000-04", "user": "U104", "course": "CS3000" },
+  { "_id": "E-CS3000-05", "user": "U105", "course": "CS3000" },
+
+  { "_id": "E-CS3100-01", "user": "U301", "course": "CS3100" },
+  { "_id": "E-CS3100-02", "user": "U202", "course": "CS3100" },
+  { "_id": "E-CS3100-03", "user": "U102", "course": "CS3100" },
+  { "_id": "E-CS3100-04", "user": "U105", "course": "CS3100" },
+  { "_id": "E-CS3100-05", "user": "U106", "course": "CS3100" },
+
+  { "_id": "E-CS3800-01", "user": "U301", "course": "CS3800" },
+  { "_id": "E-CS3800-02", "user": "U201", "course": "CS3800" },
+  { "_id": "E-CS3800-03", "user": "U101", "course": "CS3800" },
+  { "_id": "E-CS3800-04", "user": "U103", "course": "CS3800" },
+  { "_id": "E-CS3800-05", "user": "U104", "course": "CS3800" }
+]

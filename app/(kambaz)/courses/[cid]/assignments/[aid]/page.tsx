@@ -1,3 +1,6 @@
+"use client";
+
+import { useParams } from "next/navigation";
 import {
   Button,
   Col,
@@ -7,13 +10,21 @@ import {
   FormSelect,
   Row,
 } from "react-bootstrap";
+import * as db from "../../../../database";
 
 export default function AssignmentEditor() {
+  const { cid, aid } = useParams();
+
+  const assignment = db.assignments.find((a: any) => a._id === aid);
+
   return (
     <div id="wd-assignments-editor">
       <div className="mb-3">
         <FormLabel htmlFor="wd-name">Assignment Name</FormLabel>
-        <FormControl id="wd-name" defaultValue="A1" />
+        <FormControl
+          id="wd-name"
+          defaultValue={assignment?.title ?? "New Assignment"}
+        />
       </div>
 
       <div className="mb-3">
@@ -21,7 +32,7 @@ export default function AssignmentEditor() {
           as="textarea"
           rows={6}
           id="wd-description"
-          defaultValue="This is an assignment description."
+          defaultValue={`Assignment for course ${cid}.`}
         />
       </div>
 
@@ -110,7 +121,7 @@ export default function AssignmentEditor() {
               <FormControl
                 id="wd-due-date"
                 type="date"
-                defaultValue="2024-05-13"
+                defaultValue="2026-03-01"
               />
             </div>
 
@@ -123,7 +134,7 @@ export default function AssignmentEditor() {
                   <FormControl
                     id="wd-available-from"
                     type="date"
-                    defaultValue="2024-05-06"
+                    defaultValue="2026-02-15"
                   />
                 </div>
               </Col>
@@ -133,7 +144,7 @@ export default function AssignmentEditor() {
                   <FormControl
                     id="wd-available-until"
                     type="date"
-                    defaultValue="2024-05-20"
+                    defaultValue="2026-03-10"
                   />
                 </div>
               </Col>

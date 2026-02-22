@@ -1,0 +1,72 @@
+[
+  {
+    "_id": "CS1200",
+    "name": "First Year Seminar",
+    "number": "CS1200",
+    "startDate": "2026-01-01",
+    "endDate": "2026-04-17",
+    "department": "D123",
+    "credits": 4,
+    "description": "Introductory seminar for first years"
+  },
+  {
+    "_id": "CS1800",
+    "name": "Discrete Structures",
+    "number": "CS1800",
+    "startDate": "2026-01-01",
+    "endDate": "2026-04-17",
+    "department": "D123",
+    "credits": 4,
+    "description": "Logic, graphs, combinatorics foundations"
+  },
+  {
+    "_id": "CS2000",
+    "name": "Introduction to Program Design and Implementation",
+    "number": "CS2000",
+    "startDate": "2026-01-01",
+    "endDate": "2026-04-17",
+    "department": "D123",
+    "credits": 4,
+    "description": "Programming fundamentals and problem-solving"
+  },
+  {
+    "_id": "CS2100",
+    "name": "Program Design and Implementation 1",
+    "number": "CS2100",
+    "startDate": "2026-01-01",
+    "endDate": "2026-04-17",
+    "department": "D123",
+    "credits": 4,
+    "description": "Object-oriented programming fundamentals"
+  },
+  {
+    "_id": "CS3000",
+    "name": "Algorithms and Data",
+    "number": "CS3000",
+    "startDate": "2026-01-01",
+    "endDate": "2026-04-17",
+    "department": "D123",
+    "credits": 4,
+    "description": "Data structures and complexity"
+  },
+  {
+    "_id": "CS3100",
+    "name": "Program Design and Implementation 2",
+    "number": "CS3100",
+    "startDate": "2026-01-01",
+    "endDate": "2026-04-17",
+    "department": "D123",
+    "credits": 4,
+    "description": "Advanced object-oriented software development"
+  },
+  {
+    "_id": "CS3800",
+    "name": "Theory of Computation",
+    "number": "CS3800",
+    "startDate": "2026-01-01",
+    "endDate": "2026-04-17",
+    "department": "D123",
+    "credits": 4,
+    "description": "Automata, languages, computability theory"
+  }
+]
