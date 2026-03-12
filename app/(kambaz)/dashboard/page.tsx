@@ -41,7 +41,7 @@ export default function Dashboard() {
 
   const isEnrolled = (courseId: string) => {
     return enrollments.some(
-      (e: any) => e.user === currentUser?._id && e.course === courseId,
+      (e: any) => e.user === (currentUser as any)?._id && e.course === courseId,
     );
   };
 
@@ -87,6 +87,7 @@ export default function Dashboard() {
       />
       <FormControl
         value={course.description}
+        as="textarea"
         rows={3}
         onChange={(e) => setCourse({ ...course, description: e.target.value })}
       />
@@ -141,7 +142,7 @@ export default function Dashboard() {
                             e.preventDefault();
                             dispatch(
                               unenroll({
-                                userId: currentUser._id,
+                                userId: (currentUser as any)._id,
                                 courseId: course._id,
                               }),
                             );
@@ -156,7 +157,7 @@ export default function Dashboard() {
                             e.preventDefault();
                             dispatch(
                               enroll({
-                                userId: currentUser._id,
+                                userId: (currentUser as any)._id,
                                 courseId: course._id,
                               }),
                             );
