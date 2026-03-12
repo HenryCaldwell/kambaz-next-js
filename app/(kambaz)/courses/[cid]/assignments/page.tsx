@@ -2,31 +2,65 @@
 
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { Button, FormControl, ListGroup, ListGroupItem } from "react-bootstrap";
+import { useState } from "react";
+import {
+  Button,
+  FormControl,
+  ListGroup,
+  ListGroupItem,
+  Modal,
+} from "react-bootstrap";
 import { BsGripVertical } from "react-icons/bs";
 import { FaPlus, FaRegEdit } from "react-icons/fa";
+import { FaTrash } from "react-icons/fa6";
 import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
-import * as db from "../../../database";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../../store";
 import LessonControlButtons from "../modules/LessonControlButtons";
 import AssignmentControlButtons from "./AssignmentControlButtons";
+import { deleteAssignment } from "./reducer";
 
 export default function Assignments() {
   const { cid } = useParams();
+  const { assignments } = useSelector(
+    (state: RootState) => state.assignmentsReducer,
+  );
+  const dispatch = useDispatch();
 
-  const courseAssignments = db.assignments.filter((a: any) => a.course === cid);
+  const [showDialog, setShowDialog] = useState(false);
+  const [assignmentToDelete, setAssignmentToDelete] = useState<string | null>(
+    null,
+  );
+
+  const confirmDelete = (assignmentId: string) => {
+    setAssignmentToDelete(assignmentId);
+    setShowDialog(true);
+  };
+
+  const handleDelete = () => {
+    if (assignmentToDelete) {
+      dispatch(deleteAssignment(assignmentToDelete));
+    }
+    setShowDialog(false);
+    setAssignmentToDelete(null);
+  };
+
+  const courseAssignments = assignments.filter((a: any) => a.course === cid);
 
   return (
     <div>
       <div id="wd-assignments-controls" className="text-nowrap">
-        <Button
-          id="wd-add-assignment"
-          variant="danger"
-          size="lg"
-          className="me-1 float-end"
-        >
-          <FaPlus className="me-2" />
-          Assignment
-        </Button>
+        <Link href={`/courses/${cid}/assignments/new`}>
+          <Button
+            id="wd-add-assignment"
+            variant="danger"
+            size="lg"
+            className="me-1 float-end"
+          >
+            <FaPlus className="me-2" />
+            Assignment
+          </Button>
+        </Link>
 
         <Button
           id="wd-add-group"
@@ -77,18 +111,24 @@ export default function Assignments() {
                     <div className="text-secondary">
                       <span className="text-danger">Multiple Modules</span>
                       <span className="mx-2">|</span>
-                      <span>Not available until May 6 at 12:00am</span>
+                      <span>
+                        Not available until {a.availableFrom || "N/A"}
+                      </span>
                       <span className="mx-2">|</span>
                     </div>
 
                     <div className="text-secondary">
-                      <span>Due May 13 at 11:59pm</span>
+                      <span>Due {a.dueDate || "N/A"}</span>
                       <span className="mx-2">|</span>
-                      <span>100 pts</span>
+                      <span>{a.points || 100} pts</span>
                     </div>
                   </div>
 
                   <div className="ms-auto d-flex align-items-center">
+                    <FaTrash
+                      className="text-danger me-3 cursor-pointer"
+                      onClick={() => confirmDelete(a._id)}
+                    />
                     <LessonControlButtons />
                   </div>
                 </div>
@@ -97,6 +137,23 @@ export default function Assignments() {
           </ListGroup>
         </ListGroupItem>
       </ListGroup>
+
+      <Modal show={showDialog} onHide={() => setShowDialog(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>Confirm Delete</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          Are you sure you want to remove this assignment?
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => setShowDialog(false)}>
+            Cancel
+          </Button>
+          <Button variant="danger" onClick={handleDelete}>
+            Yes
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 }

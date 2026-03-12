@@ -21,6 +21,11 @@ export default function labs() {
           </Link>
         </li>
         <li>
+          <Link href="/labs/lab4" id="wd-lab3-link">
+            Lab 4: Managing State
+          </Link>
+        </li>
+        <li>
           <Link href="/" id="wd-kambaz-link">
             Kambaz
           </Link>
