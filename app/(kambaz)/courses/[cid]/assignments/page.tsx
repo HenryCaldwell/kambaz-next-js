@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Button,
   FormControl,
@@ -16,9 +16,10 @@ import { FaTrash } from "react-icons/fa6";
 import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../store";
+import * as client from "../../client";
 import LessonControlButtons from "../modules/LessonControlButtons";
 import AssignmentControlButtons from "./AssignmentControlButtons";
-import { deleteAssignment } from "./reducer";
+import { setAssignments } from "./reducer";
 
 export default function Assignments() {
   const { cid } = useParams();
@@ -32,20 +33,32 @@ export default function Assignments() {
     null,
   );
 
+  const fetchAssignments = async () => {
+    const assignments = await client.findAssignmentsForCourse(cid as string);
+    dispatch(setAssignments(assignments));
+  };
+
+  useEffect(() => {
+    fetchAssignments();
+  }, []);
+
   const confirmDelete = (assignmentId: string) => {
     setAssignmentToDelete(assignmentId);
     setShowDialog(true);
   };
 
-  const handleDelete = () => {
+  const handleDelete = async () => {
     if (assignmentToDelete) {
-      dispatch(deleteAssignment(assignmentToDelete));
+      await client.deleteAssignment(assignmentToDelete);
+      dispatch(
+        setAssignments(
+          assignments.filter((a: any) => a._id !== assignmentToDelete),
+        ),
+      );
     }
     setShowDialog(false);
     setAssignmentToDelete(null);
   };
-
-  const courseAssignments = assignments.filter((a: any) => a.course === cid);
 
   return (
     <div>
@@ -92,7 +105,7 @@ export default function Assignments() {
           </div>
 
           <ListGroup className="wd-lessons rounded-0">
-            {courseAssignments.map((a: any) => (
+            {assignments.map((a: any) => (
               <ListGroupItem key={a._id} className="wd-lesson p-3 ps-1">
                 <div className="d-flex align-items-center">
                   <div className="d-flex align-items-center">

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Button, FormControl, FormSelect } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store";
+import * as client from "../client";
 import { setCurrentUser } from "../reducer";
 
 export default function Profile() {
@@ -13,12 +14,18 @@ export default function Profile() {
     (state: RootState) => state.accountReducer,
   );
 
+  const updateProfile = async () => {
+    const updatedProfile = await client.updateUser(profile);
+    dispatch(setCurrentUser(updatedProfile));
+  };
+
   const fetchProfile = () => {
     if (!currentUser) return redirect("/account/signin");
     setProfile(currentUser);
   };
 
-  const signout = () => {
+  const signout = async () => {
+    await client.signout();
     dispatch(setCurrentUser(null));
     redirect("/account/signin");
   };
@@ -94,6 +101,12 @@ export default function Profile() {
             <option value="FACULTY">Faculty</option>
             <option value="STUDENT">Student</option>
           </FormSelect>
+          <button
+            onClick={updateProfile}
+            className="btn btn-primary w-100 mb-2"
+          >
+            Update
+          </button>
           <Button onClick={signout} className="w-100 mb-2" id="wd-signout-btn">
             Sign out
           </Button>

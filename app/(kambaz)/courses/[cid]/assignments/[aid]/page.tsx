@@ -13,7 +13,8 @@ import {
 } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../../store";
-import { addAssignment, updateAssignment } from "../reducer";
+import * as client from "../../../client";
+import { setAssignments } from "../reducer";
 
 export default function AssignmentEditor() {
   const { cid, aid } = useParams();
@@ -29,7 +30,7 @@ export default function AssignmentEditor() {
   const [assignment, setAssignment] = useState<any>(
     existing || {
       title: "New Assignment",
-      description: `New Assignment Description`,
+      description: "New Assignment Description",
       points: 100,
       dueDate: "",
       availableFrom: "",
@@ -38,11 +39,23 @@ export default function AssignmentEditor() {
     },
   );
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (isNew) {
-      dispatch(addAssignment(assignment));
+      const cidString = Array.isArray(cid) ? cid[0] : (cid as string);
+      const newAssignment = await client.createAssignment(
+        cidString,
+        assignment,
+      );
+      dispatch(setAssignments([...assignments, newAssignment]));
     } else {
-      dispatch(updateAssignment(assignment));
+      await client.updateAssignment(assignment);
+      dispatch(
+        setAssignments(
+          assignments.map((a: any) =>
+            a._id === assignment._id ? assignment : a,
+          ),
+        ),
+      );
     }
     router.push(`/courses/${cid}/assignments`);
   };

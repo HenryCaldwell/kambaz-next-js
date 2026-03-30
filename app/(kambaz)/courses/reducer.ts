@@ -1,9 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuidv4 } from "uuid";
-import { courses } from "../database";
 
 const initialState = {
-  courses: courses,
+  courses: [] as any[],
 };
 const coursesSlice = createSlice({
   name: "courses",
@@ -28,6 +27,6 @@ const coursesSlice = createSlice({
     },
   },
 });
-export const { addNewCourse, deleteCourse, updateCourse } =
+export const { addNewCourse, deleteCourse, updateCourse, setCourses } =
   coursesSlice.actions;
 export default coursesSlice.reducer;
