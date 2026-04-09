@@ -1,48 +1,24 @@
 "use client";
-
 import { useParams } from "next/navigation";
-import { Table } from "react-bootstrap";
-import * as db from "../../../database";
+import { useEffect, useState } from "react";
+import * as client from "../../client";
+import PeopleTable from "./Table";
 
-export default function PeopleTable() {
+export default function People() {
   const { cid } = useParams();
-  const { users, enrollments } = db;
-
-  const people = users.filter((user: any) =>
-    enrollments.some(
-      (enrollment: any) =>
-        enrollment.user === user._id && enrollment.course === cid,
-    ),
-  );
-
+  const [users, setUsers] = useState<any[]>([]);
+  const fetchUsers = async () => {
+    const cidString = Array.isArray(cid) ? cid[0] : cid;
+    const users = await client.findUsersForCourse(cidString);
+    setUsers(users.filter((user: any) => user !== null));
+  };
+  useEffect(() => {
+    fetchUsers();
+  }, []);
   return (
-    <div id="wd-people-table">
-      <Table striped>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Login ID</th>
-            <th>Section</th>
-            <th>Role</th>
-            <th>Last Activity</th>
-            <th>Total Activity</th>
-          </tr>
-        </thead>
-        <tbody>
-          {people.map((user: any) => (
-            <tr key={user._id}>
-              <td className="fw-semibold">
-                {user.firstName} {user.lastName}
-              </td>
-              <td>{user.loginId}</td>
-              <td>{user.section}</td>
-              <td>{user.role}</td>
-              <td>{user.lastActivity}</td>
-              <td>{user.totalActivity}</td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
+    <div>
+      <h3>People</h3>
+      <PeopleTable users={users} fetchUsers={fetchUsers} />
     </div>
   );
 }
