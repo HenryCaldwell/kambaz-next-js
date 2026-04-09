@@ -8,7 +8,7 @@ export default function People() {
   const { cid } = useParams();
   const [users, setUsers] = useState<any[]>([]);
   const fetchUsers = async () => {
-    const cidString = Array.isArray(cid) ? cid[0] : cid;
+    const cidString = Array.isArray(cid) ? cid[0] : (cid as string);
     const users = await client.findUsersForCourse(cidString);
     setUsers(users.filter((user: any) => user !== null));
   };
